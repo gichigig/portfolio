@@ -178,6 +178,10 @@ a {
 }
 
 .mobile-menu-btn {
+  position: relative;
+  z-index: 90;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   flex-direction: column;
   justify-content: center;
   gap: 0.24rem;

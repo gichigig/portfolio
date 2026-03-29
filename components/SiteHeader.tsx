@@ -26,6 +26,8 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
     [navItems],
   );
 
+  const closeMobileMenu = () => setMobileOpen(false);
+
   useEffect(() => {
     const targets = sectionIds
       .map((sectionId) => document.getElementById(sectionId))
@@ -83,6 +85,17 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
   }, [mobileOpen]);
 
   useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
     const previousOverflow = document.body.style.overflow;
 
     if (mobileOpen) {
@@ -104,7 +117,14 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[rgb(7_9_13_/_88%)] backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/#hero" className="code-text text-xs tracking-[0.24em] text-accent">
+        <Link href="/#hero" className="code-text text-xs tracking-[0.24em] text-accent flex items-center gap-4 pr-2">
+          <img
+            src="/favicon.ico"
+            alt="Billy logo"
+            width={20}
+            height={20}
+            style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }}
+          />
           BILLY
         </Link>
 
@@ -139,11 +159,11 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
         <button
           ref={menuButtonRef}
           type="button"
-          aria-label="Open navigation menu"
+          aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav-drawer"
           className="mobile-menu-btn inline-flex md:hidden"
-          onClick={() => setMobileOpen(true)}
+          onClick={() => setMobileOpen((previous) => !previous)}
         >
           <span />
           <span />
@@ -153,7 +173,7 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
 
       <div
         className={`mobile-nav-overlay ${mobileOpen ? "is-open" : ""}`}
-        onClick={() => setMobileOpen(false)}
+        onClick={closeMobileMenu}
       />
 
       <aside
@@ -167,7 +187,7 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
             ref={closeButtonRef}
             type="button"
             className="rounded-md border border-[var(--border)] px-2 py-1 text-xs text-muted transition-colors hover:border-[var(--accent)] hover:text-accent"
-            onClick={() => setMobileOpen(false)}
+            onClick={closeMobileMenu}
           >
             Close
           </button>
@@ -183,7 +203,7 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
                 href={item.href}
                 className={`mobile-nav-link ${isActive ? "is-active" : ""}`}
                 aria-current={isActive ? "location" : undefined}
-                onClick={() => setMobileOpen(false)}
+                onClick={closeMobileMenu}
               >
                 {item.label}
               </Link>
@@ -196,7 +216,7 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
           target="_blank"
           rel="noreferrer"
           className="mt-5 inline-flex items-center justify-center rounded-full border border-[var(--accent)] bg-[var(--accent)] px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-[var(--accent-strong)]"
-          onClick={() => setMobileOpen(false)}
+          onClick={closeMobileMenu}
         >
           Download Resume
         </Link>

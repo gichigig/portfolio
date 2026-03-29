@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     siteName: "Billy Portfolio",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

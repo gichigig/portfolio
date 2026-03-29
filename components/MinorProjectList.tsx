@@ -11,12 +11,10 @@ type ExpansionLevel = 0 | 1 | 2 | 3;
 
 export default function MinorProjectList({ projects }: MinorProjectListProps) {
   const [expansionBySlug, setExpansionBySlug] = useState<Record<string, ExpansionLevel>>({});
-  const startedExpansions = useRef<Set<string>>(new Set());
   const timers = useRef<Record<string, ReturnType<typeof setTimeout>[]>>({});
 
   useEffect(() => {
     const timerGroups = timers.current;
-
     return () => {
       Object.values(timerGroups).forEach((activeTimers) => {
         activeTimers.forEach((timer) => clearTimeout(timer));
@@ -25,22 +23,26 @@ export default function MinorProjectList({ projects }: MinorProjectListProps) {
   }, []);
 
   const startExpansion = (slug: string) => {
-    if (startedExpansions.current.has(slug)) {
-      return;
+    // Clear any previous timers for this card
+    if (timers.current[slug]) {
+      timers.current[slug].forEach((timer) => clearTimeout(timer));
     }
-
-    startedExpansions.current.add(slug);
     setExpansionBySlug((previous) => ({ ...previous, [slug]: 1 }));
-
     const stageTwoTimer = setTimeout(() => {
       setExpansionBySlug((previous) => ({ ...previous, [slug]: 2 }));
     }, 260);
-
     const stageThreeTimer = setTimeout(() => {
       setExpansionBySlug((previous) => ({ ...previous, [slug]: 3 }));
     }, 620);
-
     timers.current[slug] = [stageTwoTimer, stageThreeTimer];
+  };
+
+  const resetExpansion = (slug: string) => {
+    if (timers.current[slug]) {
+      timers.current[slug].forEach((timer) => clearTimeout(timer));
+      delete timers.current[slug];
+    }
+    setExpansionBySlug((previous) => ({ ...previous, [slug]: 0 }));
   };
 
   return (
@@ -52,6 +54,8 @@ export default function MinorProjectList({ projects }: MinorProjectListProps) {
           onMouseEnter={() => startExpansion(project.slug)}
           onFocus={() => startExpansion(project.slug)}
           onClick={() => startExpansion(project.slug)}
+          onMouseLeave={() => resetExpansion(project.slug)}
+          onBlur={() => resetExpansion(project.slug)}
           tabIndex={0}
         >
           <h3 className="text-base font-medium">{project.title}</h3>
