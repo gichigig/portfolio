@@ -1,0 +1,214 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3957 >>
+stream
+BT
+/F1 21.00 Tf
+1 0 0 1 54.00 750.00 Tm
+(Bildad Mwangi Ng'ang'a) Tj
+ET
+BT
+/F1 12.00 Tf
+1 0 0 1 54.00 733.00 Tm
+(Software Engineer) Tj
+ET
+BT
+/F1 10.30 Tf
+1 0 0 1 54.00 718.00 Tm
+(Nairobi, Kenya | 0768311755 | ngangabildad@gmail.com) Tj
+ET
+BT
+/F1 10.10 Tf
+1 0 0 1 54.00 705.50 Tm
+(GitHub: https://github.com/gichigig) Tj
+ET
+BT
+/F1 10.10 Tf
+1 0 0 1 54.00 693.30 Tm
+(LinkedIn: https://www.linkedin.com/in/bildad-mwangi/) Tj
+ET
+0.5 w
+54.00 681.10 m 558.00 681.10 l S
+BT
+/F1 11.80 Tf
+1 0 0 1 54.00 666.10 Tm
+(PROFESSIONAL SUMMARY) Tj
+ET
+BT
+/F1 10.40 Tf
+1 0 0 1 54.00 651.30 Tm
+(Software Engineer focused on secure full-stack solutions across Flutter, React, Spring Boot,) Tj
+ET
+BT
+/F1 10.40 Tf
+1 0 0 1 54.00 638.50 Tm
+(and Node.js. Experienced building mobile and web products with payment integrations,) Tj
+ET
+BT
+/F1 10.40 Tf
+1 0 0 1 54.00 625.70 Tm
+(role-based dashboards, and production-oriented authentication flows.) Tj
+ET
+BT
+/F1 11.80 Tf
+1 0 0 1 54.00 607.90 Tm
+(SKILLS) Tj
+ET
+BT
+/F1 10.10 Tf
+1 0 0 1 54.00 593.10 Tm
+(Languages & Frameworks: Java, TypeScript/JavaScript, Dart, Python, Flutter, React, Next.js,) Tj
+ET
+BT
+/F1 10.10 Tf
+1 0 0 1 54.00 580.70 Tm
+(Node.js, Express, Spring Boot) Tj
+ET
+BT
+/F1 10.10 Tf
+1 0 0 1 54.00 568.30 Tm
+(Databases & Tools: PostgreSQL, Supabase, REST APIs, Git, Electron, Tailwind CSS) Tj
+ET
+BT
+/F1 10.10 Tf
+1 0 0 1 54.00 555.90 Tm
+(Security & Integrations: Passkeys, 2FA, Google Sign-In/OAuth, M-Pesa STK Push, Paystack, WebRTC) Tj
+ET
+BT
+/F1 11.80 Tf
+1 0 0 1 54.00 538.50 Tm
+(EXPERIENCE) Tj
+ET
+BT
+/F1 10.40 Tf
+1 0 0 1 54.00 523.70 Tm
+(Software Engineering AttachÈ | Context Expert Limited | July 2025 - September 2025) Tj
+ET
+BT
+/F1 10.00 Tf
+1 0 0 1 62.00 510.90 Tm
+(- Collaborated with engineers to deliver frontend and backend features for internal and) Tj
+ET
+BT
+/F1 10.00 Tf
+1 0 0 1 62.00 498.70 Tm
+(client-facing applications.) Tj
+ET
+BT
+/F1 10.00 Tf
+1 0 0 1 62.00 486.50 Tm
+(- Diagnosed and resolved defects across web and mobile modules to improve release stability.) Tj
+ET
+BT
+/F1 10.00 Tf
+1 0 0 1 62.00 474.30 Tm
+(- Integrated REST API endpoints and authentication flows, including role-based behavior in) Tj
+ET
+BT
+/F1 10.00 Tf
+1 0 0 1 62.00 462.10 Tm
+(application modules.) Tj
+ET
+BT
+/F1 10.00 Tf
+1 0 0 1 62.00 449.90 Tm
+(- Supported testing and deployment handoff by documenting fixes and validating stakeholder) Tj
+ET
+BT
+/F1 10.00 Tf
+1 0 0 1 62.00 437.70 Tm
+(feedback.) Tj
+ET
+BT
+/F1 11.80 Tf
+1 0 0 1 54.00 420.50 Tm
+(EDUCATION) Tj
+ET
+BT
+/F1 10.30 Tf
+1 0 0 1 54.00 405.70 Tm
+(Diploma in Software Engineering, Zetech University \(2025\)) Tj
+ET
+BT
+/F1 11.80 Tf
+1 0 0 1 54.00 387.90 Tm
+(SELECTED PROJECTS) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 373.10 Tm
+(- Smart Rentals Platform \(Flutter, Spring Boot, Next.js Admin\): Built location-aware rental) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 361.00 Tm
+(discovery with ward filtering, nearest-listing ranking, and secure authentication.) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 348.90 Tm
+(- Hotel Operations Suite \(React, Vite, Electron, M-Pesa, Paystack\): Developed multi-role hotel) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 336.80 Tm
+(workflows for booking, payments, operations dashboards, and realtime communication.) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 324.70 Tm
+(- eLearning Campus Suite \(Node.js, Express, Supabase\): Implemented dual student and staff) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 312.60 Tm
+(portals with attendance, assessment, finance, and role-governed dashboards.) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 300.50 Tm
+(- Milk Record System \(React, Vite, SMS Integration\): Created collector workflows for milk-record) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 288.40 Tm
+(capture and farmer-facing SMS notifications.) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 276.30 Tm
+(- Church Contribution System \(Web Dashboard, M-Pesa STK Push\): Delivered bulk and live-session) Tj
+ET
+BT
+/F1 9.90 Tf
+1 0 0 1 62.00 264.20 Tm
+(contribution flows with admin management for organized giving campaigns.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000004255 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+4325
+%%EOF
