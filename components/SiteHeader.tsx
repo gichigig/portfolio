@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -96,21 +97,25 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
   }, []);
 
   useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
+    const previousOverflowX = document.body.style.overflowX;
+    const previousOverflowY = document.body.style.overflowY;
 
     if (mobileOpen) {
       hasOpenedRef.current = true;
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowX = "hidden";
+      document.body.style.overflowY = "hidden";
       window.setTimeout(() => closeButtonRef.current?.focus(), 40);
     } else {
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflowX = previousOverflowX;
+      document.body.style.overflowY = previousOverflowY;
       if (hasOpenedRef.current) {
         menuButtonRef.current?.focus();
       }
     }
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflowX = previousOverflowX;
+      document.body.style.overflowY = previousOverflowY;
     };
   }, [mobileOpen]);
 
@@ -118,7 +123,7 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[rgb(7_9_13_/_88%)] backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <Link href="/#hero" className="code-text text-xs tracking-[0.24em] text-accent flex items-center gap-4 pr-2">
-          <img
+          <Image
             src="/favicon.ico"
             alt="Billy logo"
             width={20}
