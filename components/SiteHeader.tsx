@@ -161,19 +161,21 @@ export default function SiteHeader({ navItems, resumeHref }: SiteHeaderProps) {
           </Link>
         </nav>
 
-        <button
-          ref={menuButtonRef}
-          type="button"
-          aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={mobileOpen}
-          aria-controls="mobile-nav-drawer"
-          className="mobile-menu-btn inline-flex md:hidden"
-          onClick={() => setMobileOpen((previous) => !previous)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        {!mobileOpen ? (
+          <button
+            ref={menuButtonRef}
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav-drawer"
+            className="mobile-menu-btn inline-flex md:hidden"
+            onClick={() => setMobileOpen(true)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        ) : null}
       </div>
 
       <div
